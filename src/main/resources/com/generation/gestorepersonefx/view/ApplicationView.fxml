@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.generation.gestorepersonefx.controller.ApplicationController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.generation.gestorepersonefx.controller.ApplicationController">
    <children>
-      <Pane layoutX="187.0" layoutY="93.0" prefHeight="200.0" prefWidth="200.0">
+      <Pane layoutX="20.0" layoutY="21.0" prefHeight="520.0" prefWidth="561.0">
          <children>
-            <Text layoutX="100.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIAO" />
-         </children>
-      </Pane>
+            <Text fx:id="peopleList" fill="WHITE" layoutX="164.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Da caricare" wrappingWidth="341.13671875" />
+            <Button layoutX="60.0" layoutY="60.0" mnemonicParsing="false" onAction="#riempiCasellaTesto" style="-fx-background-color: green;" text="Leggi" textFill="WHITE" />
+         </children></Pane>
    </children>
 </AnchorPane>
