@@ -61,4 +61,16 @@ public class ApplicationController
 //			formPerson.setVisible(true);
 		formPerson.setVisible(!isVisible);
 	}
+
+	//prende nome e cognome e cancella la persona con essi
+	//se non esiste deve semplicemente mettere nella lista ("Persona non trovata")
+	public void killer()
+	{
+		String nome = name.getText();
+		String cognome = surname.getText();
+		String contenuto = helper.faiFuori(nome,cognome);
+		name.clear();
+		surname.clear();
+		formPerson.setVisible(false);
+	}
 }

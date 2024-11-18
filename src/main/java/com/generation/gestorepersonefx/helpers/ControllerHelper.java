@@ -76,7 +76,7 @@ public class ControllerHelper
 		Person p = new Person(name,surname);
 		try
 		{
-			p = repo.insertPerson(p);
+			repo.insertPerson(p);
 			return produciListaPerCognome(surname);
 		} catch (SQLException e)
 		{
@@ -85,5 +85,9 @@ public class ControllerHelper
 	}
 
 
-
+	public String faiFuori(String nome, String cognome)
+	{
+		//TODO
+		return "TODO";
+	}
 }

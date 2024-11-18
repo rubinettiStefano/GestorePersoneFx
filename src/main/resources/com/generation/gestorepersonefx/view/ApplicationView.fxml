@@ -13,7 +13,7 @@
             <Button layoutX="69.0" layoutY="69.0" mnemonicParsing="false" onAction="#riempiCasellaTesto" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: green;" text="Leggi tutti" textFill="WHITE" />
             <TextField fx:id="casella" layoutX="194.0" layoutY="146.0" prefHeight="25.0" prefWidth="70.0" promptText="Cognome" />
             <Button layoutX="69.0" layoutY="146.0" mnemonicParsing="false" onAction="#stampaCasellaConsole" prefHeight="25.0" prefWidth="91.0" text="Leggi casella" />
-            <GridPane fx:id="formPerson" layoutX="60.0" layoutY="308.0" visible="false">
+            <GridPane fx:id="formPerson" layoutX="60.0" layoutY="313.0" prefHeight="115.0" prefWidth="183.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
@@ -25,13 +25,17 @@
               </rowConstraints>
                <children>
                   <TextField fx:id="surname" promptText="surname" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" onAction="#leggiForm" text="Inserisci" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" onAction="#leggiForm" prefHeight="25.0" prefWidth="60.0" text="Inserisci" GridPane.rowIndex="3" />
                   <TextField fx:id="name" promptText="name" GridPane.rowIndex="1" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Form Inserimento" wrappingWidth="102.90625">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
                   </Text>
+                  <Button mnemonicParsing="false" onAction="#killer" prefHeight="25.0" prefWidth="73.0" text="Cancella" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="110.0" />
+                     </GridPane.margin></Button>
                </children>
             </GridPane>
             <Button layoutX="68.0" layoutY="274.0" mnemonicParsing="false" onAction="#toggleForm" text="Toggla Form" />
