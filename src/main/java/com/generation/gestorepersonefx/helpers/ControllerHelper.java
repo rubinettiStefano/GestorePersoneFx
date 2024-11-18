@@ -29,7 +29,11 @@ public class ControllerHelper
 
 			for(Person p : all)
 			{
-				res.append(p.getId()+" ");
+				//                     condizione     V.V    V.F
+				res.append(p.getId());
+				res.append(	p.getId()<10 	? 	"     " 	:
+							p.getId()<100   ?   "   "		:
+							" ");
 				res.append(p.getName()+" ");
 				res.append(p.getSurname()+"\n");
 			}
