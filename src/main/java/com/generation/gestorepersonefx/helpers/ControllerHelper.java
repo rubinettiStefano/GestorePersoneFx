@@ -45,6 +45,44 @@ public class ControllerHelper
 		}
 	}
 
+	public String produciListaPerCognome(String surname)
+	{
+		try
+		{
+			List<Person> all = repo.findPeopleBySurname(surname);
+			StringBuilder res = new StringBuilder();
+
+			for(Person p : all)
+			{
+				//                     condizione     V.V    V.F
+				res.append(p.getId());
+				res.append(	p.getId()<10 	? 	"     " 	:
+							   p.getId()<100   ?   "   "		:
+							   " ");
+				res.append(p.getName()+" ");
+				res.append(p.getSurname()+"\n");
+			}
+
+			return res.toString();
+		}catch (SQLException e)
+		{
+			return "Problema con il db";
+		}
+	}
+
+
+	public String inserisciPersonaEDaiParenti(String name,String surname)
+	{
+		Person p = new Person(name,surname);
+		try
+		{
+			p = repo.insertPerson(p);
+			return produciListaPerCognome(surname);
+		} catch (SQLException e)
+		{
+			return "Problema con il db, inserimento fallito";
+		}
+	}
 
 
 
