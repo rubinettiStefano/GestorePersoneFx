@@ -86,12 +86,12 @@ public class PersonRepository
 
 
 
-	private Person convertFromRowToObject(ResultSet rs) throws SQLException
+	private Person convertFromRowToObject(ResultSet row) throws SQLException
 	{
 		Person p = new Person();
-		p.setId(rs.getInt("id"));
-		p.setName(rs.getString("name"));
-		p.setSurname(rs.getString("surname"));
+		p.setId(row.getInt("id"));
+		p.setName(row.getString("name"));
+		p.setSurname(row.getString("surname"));
 		return p;
 	}
 
