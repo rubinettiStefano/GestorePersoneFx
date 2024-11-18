@@ -69,6 +69,7 @@ public class ApplicationController
 		String nome = name.getText();
 		String cognome = surname.getText();
 		String contenuto = helper.faiFuori(nome,cognome);
+		peopleList.setText(contenuto);
 		name.clear();
 		surname.clear();
 		formPerson.setVisible(false);
