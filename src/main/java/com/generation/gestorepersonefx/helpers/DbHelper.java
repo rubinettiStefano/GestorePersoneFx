@@ -4,11 +4,21 @@ import java.sql.*;
 
 public class DbHelper {
 
+    private static DbHelper instance;
+
+    public static DbHelper getInstance()
+    {
+        if(instance == null)
+            instance = new DbHelper();
+
+        return instance;
+    }
+
     Connection conn;
 
 
-    public DbHelper(String dbName) {
-        String url = "jdbc:mysql://localhost:3306/"+dbName;
+    private DbHelper() {
+        String url = "jdbc:mysql://localhost:3306/gestorepersone";
         String username = "jaita";
         String password = "jaita";
 
